@@ -1,18 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume</title>
-    <link rel="stylesheet" href="catibog.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="catibog.css"/>
 </head>
 <body>
-    <div class="resume-container">
-        <div class="blog-sec">
-                <img src="profile.jpg" class="blog-image" />
-                <h1>My Journey as a BSIT Student</h1>
-                <p>
-                    Hi! I’m a BS Information Technology student at Cavite State University (CvSU), and this blog is where I share my journey into the world of web development.
+    <header>
+        <div class="header-content">
+            <img src="profile.jpg" alt="Profile Picture" class="profile-pic" />
+                <div class="header-text">
+                    <h1>John Carlo Catibog</h1>
+                    <p>BSIT Student | Front-End Developer</p>
+                </div>
+            <button id="darkModeToggle">🌙 Dark Mode</button>
+        </div>
+    </header>
+
+
+  <section class="about">
+    <h2>About Me</h2>
+    <p>
+        Motivated and detail-oriented Information Technology student from Cavite State University (CvSU) with hands-on experience in front-end web development using HTML, CSS, and JavaScript. Adept at creating responsive, user-friendly websites with clean, maintainable code and a strong eye for UI/UX design. Proficient in building interactive web interfaces and integrating modern design trends.
+        <br>Demonstrates strong problem-solving skills, teamwork, and a continuous learning mindset. Passionate about improving digital experiences and staying updated with the latest web technologies.
+        <br>Looking to contribute front-end expertise and creativity to dynamic development teams or internship opportunities that foster growth and innovation.
+    </p>
+  </section>
+
+  <section class="projects">
+    <h2>Skills</h2>
+    <div class="project-card1">
+      <h4>HTML, CSS</h4>
+    </div>
+    <div class="project-card1">
+      <h4>JavaScript, React.js</h4>
+    </div>
+    <div class="project-card1">
+      <h4>Java, Python, Php</h4>
+    </div>
+    <div class="project-card1">
+      <h4>Git & GitHub</h4>
+    </div>
+    <div class="project-card1">
+      <h4>API Integration</h4>
+    </div>
+  </section>
+
+  <section class="projects">
+    <h2>Experience</h2>
+    <div class="project-card">
+      <h3>School Library Website</h3>
+      <p class="company">2023 – General Trias, Cavite</p>
+      <p>Developed a student-focused library website aimed at improving digital access to resources for General Trias Memorial Elementary School. Responsible for front-end structure, styling, and responsive layout.</p
+    </div>
+  </section>
+
+  <section class="blog">
+    <h2>Blog</h2>
+    <div class="blog-post">
+      <h3 onclick="togglePost(this)">📌 My Web Dev Journey</h3>
+      <p class="content">Hi! I’m a BS Information Technology student at Cavite State University (CvSU), and this blog is where I share my journey into the world of web development.
                     It all started with a simple curiosity: <strong>How are websites made?</strong> That question led me down a path of endless discovery. As I explored the basics of HTML, CSS, and JavaScript, I realized how powerful these tools are in building the digital world around us.
                     <br><br>
                     Right now, I’m trying to build multiple projects—ranging from static pages to interactive, mobile-responsive websites. I’m learning to design clean layouts, code user-friendly interfaces, and debug problems (a lot of them!). Every challenge taught me something new—not just about tech, but about patience, creativity, and persistence.
@@ -20,59 +68,32 @@
                     Along the way, I’ve also started exploring tools and frameworks like Bootstrap, Tailwind CSS, and version control with Git. I love seeing how small lines of code can bring big ideas to life.
                     <br><br>
                     This blog is a reflection of my growth—not just in skills, but in mindset. Whether you're a fellow student, aspiring developer, or just someone curious about tech, I hope my posts inspire or help you in some way.
-                    I'm still learning, still experimenting, and still building—and I'm excited for what’s ahead. Thanks for being part of the journey!
-                </p>
-        </div>
+                    I'm still learning, still experimenting, and still building—and I'm excited for what’s ahead. Thanks for being part of the journey!</p>
     </div>
-
-    <div class="resume-container">
-        <header class="header">
-            <h1>John Carlo Catibog</h1>
-            <p class="title">Web Developer</p>
-            <p class="contact">Email: johncarlo.catibog@cvsu.edu.ph </p>
-            <p class="address">Location: Alfonso, Cavite</p>
-        </header>
-        
-        <section class="section">
-            <h2>Summary</h2>
-            <p>Motivated and detail-oriented Information Technology student from Cavite State University (CvSU) with hands-on experience in front-end web development using HTML, CSS, and JavaScript. Adept at creating responsive, user-friendly websites with clean, maintainable code and a strong eye for UI/UX design. Proficient in building interactive web interfaces and integrating modern design trends.
-                Demonstrates strong problem-solving skills, teamwork, and a continuous learning mindset. Passionate about improving digital experiences and staying updated with the latest web technologies.
-                Looking to contribute front-end expertise and creativity to dynamic development teams or internship opportunities that foster growth and innovation.</p>
-        </section>
-
-        <section class="section">
-            <h2>Skills</h2>
-            <ul>
-                <li>HTML, CSS, JavaScript</li>
-                <li>Responsive Web Design</li>
-                <li>Java, Python, Php</li>
-                <li>Git & GitHub</li>
-                <li>API Integration</li>
-            </ul>
-        </section>
-
-        <section class="section">
-            <h2>Experience</h2>
-            <div class="job">
-                <h3>School Library Website</h3>
-                <p class="company">2023 – General Trias, Cavite</p>
-                <p>Developed a student-focused library website aimed at improving digital access to resources for General Trias Memorial Elementary School. Responsible for front-end structure, styling, and responsive layout.</p>
-            </div>
-        </section>
-
-        <section class="section">
-            <h2>Education</h2>
-            <p><strong>Bachelor of Science in Information Technology</strong> | Cavite State University | 2025</p>
-        </section>
-           
-        <footer class="footer">
-            <p>© 2025 John Carlo Catibog</p>
-        </footer>
+    <div class="blog-post">
+      <h3 onclick="togglePost(this)">📌 Why I Love Front-End Development</h3>
+      <p class="content">1. Instant Creativity Meets Functionality <br>
+Web development is one of the few fields where you can see your ideas come to life immediately. From a blank screen, I can design, build, and deploy something others can interact with. Whether it's a portfolio, a blog, or a useful tool, there’s satisfaction in turning imagination into something tangible.
+<br><br>
+2. Continuous Learning and Innovation <br>
+The web evolves constantly. With new frameworks, tools, and design trends always emerging (like React, Tailwind, or Web3 integrations), there’s always something new to learn. This keeps me motivated and engaged—web development is never boring, and it encourages me to grow every day.
+<br><br>
+3. Global Reach and Real Impact <br>
+Websites are accessible anywhere in the world. Whether it's a student using a library system I built, or a local business using a site I designed to attract customers—what I create can genuinely help others, no matter where they are.
+<br><br>
+4. The Blend of Logic and Design <br>
+Web development balances technical logic with artistic creativity. Writing clean code is just as important as making it visually appealing and user-friendly. That mix of structure and creativity is incredibly fulfilling—it exercises both sides of the brain.
+<br><br>
+5. Personal Growth and Freedom <br>
+It’s a career that supports freedom and flexibility. I can build my own projects, contribute to open-source, freelance, or even work remotely. The skills I’m learning today give me control over my future—both creatively and professionally.
+</p>
     </div>
-    <button onclick="document.body.classList.toggle('dark-mode')" style="position:fixed; top:10px; right:10px; padding:8px 12px; background:#4CAF50; color:white; border:none; border-radius:4px; cursor:pointer;">
-        Dark Mode
-    </button>
-    
-    
+  </section>
+
+  <footer>
+    <p>© 2025 John Carlo Catibog | Portfolio</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
