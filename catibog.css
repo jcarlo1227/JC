@@ -1,17 +1,20 @@
-
+/* Base Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Body Styles */
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f4f4f4;
     color: #333;
     line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
 }
 
+/* Resume Container */
 .resume-container {
     max-width: 800px;
     margin: 20px auto;
@@ -19,8 +22,10 @@ body {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease;
 }
 
+/* Header */
 .header {
     text-align: center;
     margin-bottom: 40px;
@@ -37,28 +42,50 @@ body {
     color: #666;
 }
 
-.header .contact {
-    font-size: 14px;
-    color: #888;
-}
-
+.header .contact,
 .header .address {
     font-size: 14px;
     color: #888;
 }
 
+/* Section Styling */
 .section {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    padding: 15px;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
+.section:hover {
+    background-color: #f0fff4;
+    transform: translateY(-3px);
+}
+
+/* Section Header with Animated Underline */
 .section h2 {
     font-size: 24px;
-    border-bottom: 2px solid #4CAF50;
-    padding-bottom: 5px;
-    margin-bottom: 15px;
     color: #4CAF50;
+    margin-bottom: 15px;
+    position: relative;
 }
 
+.section h2::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: #4CAF50;
+    transition: width 0.4s ease;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+.section:hover h2::after {
+    width: 100%;
+}
+
+/* Lists */
 .section ul {
     list-style: none;
     margin-left: 20px;
@@ -67,8 +94,16 @@ body {
 .section ul li {
     font-size: 16px;
     margin-bottom: 10px;
+    transition: color 0.3s, transform 0.3s;
 }
 
+.section ul li:hover {
+    color: #2e7d32;
+    transform: translateX(5px);
+    cursor: pointer;
+}
+
+/* Job Section (if used in future) */
 .job h3 {
     font-size: 20px;
     margin-bottom: 5px;
@@ -79,9 +114,96 @@ body {
     color: #555;
 }
 
+/* Footer */
 .footer {
     text-align: center;
     font-size: 12px;
     color: #777;
     margin-top: 40px;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .header h1 {
+        font-size: 28px;
+    }
+
+    .section h2 {
+        font-size: 20px;
+    }
+
+    .section ul li {
+        font-size: 14px;
+    }
+}
+
+/* Optional: Dark Mode Support */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.dark-mode .resume-container {
+    background-color: #1e1e1e;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .section {
+    background-color: #1a1a1a;
+}
+body.dark-mode .header h1{
+    color: white;
+}
+body.dark-mode .blog-sec p {
+    color: white;
+    background-color: #1a1a1a;
+}
+body.dark-mode .section h2,
+body.dark-mode .section ul li:hover {
+    color: #90caf9;
+}
+
+body.dark-mode .footer {
+    color: #aaa;
+}
+
+.blog-sec h1 {
+    font-size: 30px;
+    color: #2e7d32;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.blog-sec p {
+    font-size: 16px;
+    color: #444;
+    text-align: center;
+    padding: 40px 8% 40px 8%;
+}
+
+.blog-image {
+    display: block;
+    margin: auto;
+    width: 50%;
+    height: auto;
+    border-radius: 100%;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.blog-image:hover {
+    transform: scale(1.02);
 }
